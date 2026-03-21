@@ -1,0 +1,564 @@
+/* styles/Home.module.css */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.25rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 5.25rem 0 4rem;
+}
+
+.topImageSection {
+  margin-top: 0rem; /* space below navbar */
+  margin-bottom: 2.5rem;
+}
+
+.topImageWrap {
+  position: relative;
+  width: 100%;
+
+  /* NEW: reserves layout space immediately + scales nicely */
+  aspect-ratio: 16 / 9;
+  max-height: 360px;
+
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: var(--color-surface);
+}
+
+.topImage {
+  object-fit: cover;
+  object-position: center;
+
+  /* optional tiny paint hint */
+  transform: translateZ(0);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.25rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.kicker {
+  color: var(--color-text-muted);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  margin-bottom: 0.65rem;
+}
+
+/* Keep only ONE h1 rule */
+.h1 {
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.subhead {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 42rem;
+  margin-bottom: 1.25rem;
+}
+
+/* =========================
+   CTA ROW
+   ========================= */
+
+.ctaRow {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.heroCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.heroCardFooter {
+  margin-top: auto; /* MAGIC LINE */
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.heroTagline {
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  font-weight: 500;
+  margin: 0 0 1rem;
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+/* Top row inside service cards: title left, price right */
+.cardTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.priceValue {
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  white-space: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.heroCard {
+  padding: 1.25rem;
+}
+
+.heroCardTitle {
+  font-size: 1.05rem;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+}
+
+.heroCardList {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+/* =========================
+   COMMERCIAL BANNER
+   ========================= */
+
+.commercialNote {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  max-width: 1100px; /* match your container width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.25rem; /* match your page padding */
+}
+
+/* FEATURED SERVICE (Recurring) */
+
+.featuredCard {
+  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+}
+
+.featuredTag {
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+/* =========================
+   REVIEWS HERO SECTION
+   ========================= */
+
+.reviewsSection {
+  position: relative;
+  margin-top: 3rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+
+  /* background image */
+  background-image: url("/images/kitchen.webp"); /* swap to a dedicated reviews bg if you prefer */
+  background-size: cover;
+  background-position: center;
+}
+
+.reviewsOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 18, 32, 0.45),
+    rgba(11, 18, 32, 0.35)
+  );
+}
+
+.reviewsInner {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.reviewsTitle {
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  font-weight: 900;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+}
+
+.reviewsSubhead {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.starsBig {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+.reviewsCount {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.reviewsTrack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-top: 0.5rem;
+}
+
+.reviewCard {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-text);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.25rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  height: 100%;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.75rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #fff;
+  background: color-mix(in srgb, var(--color-accent) 75%, #000 25%);
+}
+
+.starsSmall {
+  color: #f5b301; /* warm gold */
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.reviewQuote {
+  margin: 0 0 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.98rem;
+  flex-grow: 1;
+}
+
+.readMore {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.75rem;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.reviewFooter {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.reviewerLine {
+  font-weight: 700;
+}
+
+.reviewerArea {
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.dots {
+  display: none;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.dotActive {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive: turn into swipeable cards on mobile */
+@media (max-width: 900px) {
+  .reviewsInner {
+    padding: 2rem 1.1rem 1.5rem;
+  }
+
+  .reviewsTrack {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(260px, 85%);
+    grid-template-columns: unset;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.25rem;
+  }
+
+  .reviewCard {
+    scroll-snap-align: center;
+  }
+
+  .dots {
+    display: inline-flex;
+  }
+}
+
+.commercialLink {
+  font-size: 0.95rem; /* ADD THIS */
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.commercialLink:hover {
+  opacity: 0.7;
+}
+
+.bannerTitle {
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.bannerText {
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+}
+
+.section {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.serviceCard {
+  padding: 1.1rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary), var(--shadow-lg);
+}
+
+.serviceTitle {
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.serviceText {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  font-size: 0.98rem;
+  flex: 1;
+}
+
+/* DETAILS: always visible now (no hover reveal) */
+.serviceDetails {
+  list-style: none;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.addonsRow {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.addonCard {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
+.addonCard .cardTop {
+  margin-bottom: 0;
+}
+
+.addonPriceValue {
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.addonDetails {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.serviceDetails li {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.serviceDetails li::before {
+  content: "•";
+  color: var(--color-accent);
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+}
+
+/* =========================
+   PRICING
+   ========================= */
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.priceCard {
+  padding: 1.25rem 1.1rem;
+}
+
+.priceTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.priceName {
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.priceFine {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Accent highlight (selected card) */
+.highlight {
+  border-color: color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid3,
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .h1 {
+    font-size: 2.45rem;
+  }
+
+  /* optional: reduce hero image height cap on small screens */
+  .topImageWrap {
+    max-height: 280px;
+  }
+}

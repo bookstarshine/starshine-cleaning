@@ -1,0 +1,317 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.25rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 5.25rem 0 4rem;
+}
+
+/* =========================
+   TOP IMAGE
+   ========================= */
+
+.topImageSection {
+  margin-top: 0rem;
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem; /* breathing room from edges */
+}
+
+.topImageWrap {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 22vw, 260px); /* smaller + responsive */
+
+  padding: 10px; /* inner spacing */
+
+  border-radius: calc(var(--radius-lg) + 4px);
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: var(--color-surface);
+}
+
+.topImage {
+  object-fit: contain;
+  object-position: center top;
+  border-radius: var(--radius-lg);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.25rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.kicker {
+  color: var(--color-text-muted);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  margin-bottom: 0.65rem;
+}
+
+.h1 {
+  font-size: 3rem;
+  line-height: 1.05;
+  margin-bottom: 0.9rem;
+}
+
+.subhead {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 42rem;
+  margin-bottom: 1.25rem;
+}
+
+/* =========================
+   CTA ROW
+   ========================= */
+
+.ctaRow {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+.cardTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.priceValue {
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.heroCard {
+  padding: 1.25rem;
+}
+
+.heroCardTitle {
+  font-size: 1.05rem;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+}
+
+.heroCardList {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.section {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.serviceCard {
+  padding: 1.1rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary), var(--shadow-lg);
+}
+
+.serviceTitle {
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.serviceText {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  font-size: 0.98rem;
+  flex: 1;
+}
+
+/* DETAILS: always visible now (no hover reveal) */
+.serviceDetails {
+  list-style: none;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.addonsRow {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.addonCard {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
+.addonCard .cardTop {
+  margin-bottom: 0;
+}
+
+.addonPriceValue {
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.addonDetails {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.serviceDetails li {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.serviceDetails li::before {
+  content: "•";
+  color: var(--color-accent);
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+}
+
+/* =========================
+   FULL-WIDTH SECTION IMAGES
+   ========================= */
+
+.fullWidthImage {
+  width: 100%;
+  max-width: 800px;     /* ← make smaller */
+  height: auto;
+  display: block;
+
+  margin: 1.5rem auto 0;  /* center it */
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   SCOPE LINK (FIXED SPACING)
+   ========================= */
+
+.scopeRow {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 1.25rem;
+  margin-bottom: 0rem;
+  padding: 0.25rem 0;
+}
+
+.scopeLink {
+  font-size: 0.95rem; /* ADD THIS */
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.serviceBadge {
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--color-primary);   /* you requested primary */
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.scopeLink:hover {
+  opacity: 0.7;
+}
+
+
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .h1 {
+    font-size: 2.45rem;
+  }
+}
+
+.heroCardFooter {
+  margin-top: 1.25rem; /* creates separation from list */
+  padding-top: 0.5rem;
+}

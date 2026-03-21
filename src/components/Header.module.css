@@ -1,0 +1,224 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow 0.2s ease;
+}
+
+.headerScrolled {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* thinner header */
+  padding: 0.35rem 1.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+/* Bigger logo */
+.logo {
+  height: 96px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.link {
+  font-weight: 700;
+  color: var(--color-text);
+  opacity: 0.9;
+  transition: opacity 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+.cta {
+  white-space: nowrap;
+}
+
+/* Mobile controls hidden on desktop */
+.mobileControls {
+  display: none;
+  position: relative;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hamburger button sized to match typical btnSm height */
+.menuBtn {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 12px;
+
+  height: 40px;
+  min-width: 40px;
+  padding: 0 0.6rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.menuBtn:hover {
+  background: color-mix(in srgb, var(--color-surface) 88%, black);
+}
+
+.menuBtn:active {
+  transform: translateY(1px);
+}
+
+.menuBtn:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
+  outline-offset: 3px;
+}
+
+.menuIcon {
+  width: 18px;
+  height: 12px;
+  background:
+    linear-gradient(currentColor, currentColor) 0 0 / 100% 2px no-repeat,
+    linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat,
+    linear-gradient(currentColor, currentColor) 0 100% / 100% 2px no-repeat;
+  opacity: 0.9;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(320px, calc(100vw - 2rem));
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 0.6rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  display: grid;
+  gap: 0.25rem;
+  z-index: 1001;
+
+  /* Typography normalization */
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+/* Make menu links look like menu items */
+.dropdownLink {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+
+  color: var(--color-text);
+  text-decoration: none;
+
+  padding: 0.8rem 0.85rem;
+  border-radius: 12px;
+
+  transition: background 0.15s ease, transform 0.06s ease, opacity 0.15s ease;
+}
+
+.dropdownLink:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.dropdownLink:active {
+  transform: translateY(1px);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.dropdownLink:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
+  outline-offset: 3px;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.25rem 0.25rem;
+}
+
+/* "Book Now" button in dropdown */
+.dropdownCta {
+  width: 100%;
+
+  /* justify-content only works if it's flex */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-decoration: none;
+
+  transition: transform 0.06s ease, opacity 0.15s ease, filter 0.15s ease;
+}
+
+.dropdownCta:hover {
+  opacity: 0.92;
+}
+
+.dropdownCta:active {
+  transform: translateY(1px);
+  opacity: 0.88;
+}
+
+.dropdownCta:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
+  outline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+
+  .mobileControls {
+    display: inline-flex;
+  }
+
+  /* Keep logo big on mobile too */
+  .logo {
+    height: 84px;
+  }
+}

@@ -1,0 +1,183 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.25rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;           /* match Home */
+  padding: 5.25rem 0 4rem;     /* match Home */
+}
+
+/* =========================
+   HERO (match Home)
+   ========================= */
+
+.hero {
+  margin-bottom: 2.5rem;       /* match Home rhythm */
+}
+
+.kicker {
+  color: var(--color-text-muted);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  margin-bottom: 0.65rem;
+}
+
+/* Match Home h1 sizing */
+.h1 {
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.subhead {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 70ch;             /* About keeps a slightly longer line */
+  margin: 0;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.section {
+  margin-top: 4rem;            /* match Home section spacing */
+}
+
+.sectionTitle {
+  font-size: 1.6rem;           /* match Home sectionTitle */
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   GRID + CARDS (match Home)
+   ========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);   /* match Home */
+  box-shadow: var(--shadow-md);      /* match Home */
+  padding: 1.15rem 1rem;
+}
+
+/* NEW: header row for title + mini subtitle */
+.cardHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+/* “Calm / Simple / Excellent” tag */
+.cardSubtitle {
+  color: var(--color-primary);       /* match your request: primary */
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0.9;
+
+  /* optional: tiny pill to match Home’s “badge” vibe without heavy color */
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, var(--color-border));
+  background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+}
+
+.cardText {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* =========================
+   LIST (match Home feel)
+   ========================= */
+
+.list {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  padding: 0;
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.list li::before {
+  content: "•";
+  color: var(--color-accent);
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+}
+
+/* =========================
+   BAND (match Home’s gentle tints)
+   ========================= */
+
+.band {
+  background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.25rem 1rem;
+}
+
+.bandTitle {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.bandText {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  max-width: 80ch;
+  margin: 0;
+}
+
+/* =========================
+   RESPONSIVE (match Home breakpoint)
+   ========================= */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .h1 {
+    font-size: 2.45rem; /* match your Home mobile h1 */
+  }
+}
