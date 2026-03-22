@@ -3,6 +3,7 @@
    ========================= */
 
 :root {
+  color-scheme: light;
   /* Crisp + Pop (clean, modern, high-contrast) */
   --color-bg: #f3f7f4;          /* cool, clean paper */
   --color-surface: #ffffff;     /* true white cards */
@@ -38,38 +39,6 @@
   --shadow: var(--shadow-md);
 }
 
-/* =========================
-   DARK MODE (CALM, NOT NEON)
-   ========================= */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b1220;
-    --foreground: #e5e7eb;
-
-    --color-bg: #0b1220;
-    --color-surface: #0f172a;
-    --color-border: #1f2a3a;
-    --color-text: #e5e7eb;
-    --color-text-muted: #aab2bf;
-
-    --color-primary: #3b82f6;
-    --color-primary-hover: #2563eb;
-
-    --color-accent: #22c55e;
-    --color-accent-hover: #16a34a;
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
-    --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 16px 44px rgba(0, 0, 0, 0.55);
-
-    --shadow: var(--shadow-md);
-  }
-}
-
-/* =========================
-   BASE RESET
-   ========================= */
 
 html,
 body {
@@ -99,12 +68,6 @@ a {
 :focus-visible {
   outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
   outline-offset: 3px;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 /* =========================
