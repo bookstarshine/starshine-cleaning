@@ -86,7 +86,6 @@ export default function Home() {
               <div className={styles.heroCardTitle}>What our clients value most</div>
               <ul className={styles.heroCardList}>
                 <li>Locally-Owned &amp; Trusted</li>
-                <li>Fully Insured</li>  
                 <li>Vetted Professionals</li>
                 <li>Satisfaction Guaranteed</li>
                 <li>Consistent Results</li>
