@@ -98,6 +98,26 @@ export default function Scope() {
             The following services are available by request and must be confirmed prior to service.
           </p>
 
+          <h3 className={styles.h2}>Carpet Extraction</h3>
+
+<p className={styles.p}>
+  Deep cleaning of carpets using professional-grade extraction equipment to remove dirt,
+  debris, and allergens. Recommended for high-traffic areas, post-move, or periodic
+  deep maintenance.
+</p>
+
+<ul className={styles.ul}>
+  <li>Full carpet extraction with professional-grade cleaner</li>
+  <li>Focus on high-traffic and heavily soiled areas</li>
+  <li>Furniture moved minimally to access floor surfaces</li>
+  <li>Drying and grooming to minimize moisture retention</li>
+</ul>
+
+<p className={styles.p}>
+  Pricing may vary depending on room size, carpet condition, 
+  and accessibility. Pre-treatment for tough stains or odor removal may be requested separately.
+</p>
+
           <h3 className={styles.h2}>Laundry</h3>
 
           <ul className={styles.ul}>

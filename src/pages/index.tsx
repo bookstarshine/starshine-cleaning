@@ -68,7 +68,7 @@ export default function Home() {
 
               <p className={styles.subhead}>
                 Thoughtful home cleaning, designed to restore calm — serving Park City and nearby
-                Summit County homes with clear pricing and consistent results.
+                Summit County homes with reliable and consistent results.
               </p>
 
               <div className={styles.ctaRow}>
@@ -85,11 +85,13 @@ export default function Home() {
             <div className={`${styles.card} ${styles.heroCard}`}>
               <div className={styles.heroCardTitle}>What our clients value most</div>
               <ul className={styles.heroCardList}>
-                <li>Locally-Owned</li>
+                <li>Locally-Owned &amp; Trusted</li>
+                <li>Fully Insured</li>  
+                <li>Vetted Professionals</li>
+                <li>Satisfaction Guaranteed</li>
                 <li>Consistent Results</li>
                 <li>Attention to Detail</li>
-                <li>Satisfaction Guaranteed</li>
-                <li>Trusted &amp; Vetted Professionals</li>
+                       
               </ul>
 
               <div className={styles.heroCardFooter}>
@@ -154,7 +156,7 @@ export default function Home() {
               <Link href="/book" className={`${styles.card} ${styles.serviceCard}`}>
                 <div className={styles.cardTop}>
                   <div className={styles.serviceTitle}>Deep Clean</div>
-                  <div className={styles.priceValue}>$349</div>
+                  <div className={styles.priceValue}>$349+</div>
                 </div>
                 <p className={styles.serviceText}>
                   The perfect option for rental-resets, move-ins, or move-outs. We go above and
@@ -171,7 +173,7 @@ export default function Home() {
               <Link href="/book" className={`${styles.card} ${styles.serviceCard}`}>
                 <div className={styles.cardTop}>
                   <div className={styles.serviceTitle}>Standard Clean</div>
-                  <div className={styles.priceValue}>$249</div>
+                  <div className={styles.priceValue}>$249+</div>
                 </div>
                 <p className={styles.serviceText}>
                   A thorough clean and tidy reset — ideal before guests, after travel, or when life
@@ -190,7 +192,7 @@ export default function Home() {
               >
                 <div className={styles.cardTop}>
                   <div className={styles.serviceTitle}>Recurring Service</div>
-                  <div className={styles.priceValue}>$199</div>
+                  <div className={styles.priceValue}>$199+</div>
                 </div>
 
                 <div className={styles.featuredTag}>Most popular</div>
@@ -214,12 +216,11 @@ export default function Home() {
     className={`${styles.card} ${styles.addonCard} ${styles.serviceCard}`}
   >
     <div className={styles.cardTop}>
-      <div className={styles.serviceTitle}>Carpet Extraction</div>
-      <div className={styles.addonPriceValue}>$100</div>
+      <div className={styles.serviceTitle}>Appliance Deep Clean</div>
+      <div className={styles.addonPriceValue}>$100+</div>
     </div>
     <p className={styles.addonDetails}>
-       Hot water extraction to lift dirt, salt, and buildup from
-                  high-traffic areas.
+       Detailed appliance cleaning for refrigerators, ovens, and microwaves to improve hygiene and restore shine.
     </p>
   </Link>
 

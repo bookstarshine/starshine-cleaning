@@ -182,7 +182,7 @@ export default function BookPage() {
     // Add-ons (Residential only)
     addOnLaundry: false,
     addOnPlantCare: false,
-    addOnCarpetExtraction: false,
+    addOnAppliances: false,
 
     // Commercial only (structured)
     businessName: "",
@@ -215,7 +215,7 @@ export default function BookPage() {
       frequency: "biweekly",
       addOnLaundry: next === "residential" ? prev.addOnLaundry : false,
       addOnPlantCare: next === "residential" ? prev.addOnPlantCare : false,
-      addOnCarpetExtraction: next === "residential" ? prev.addOnCarpetExtraction : false,
+      addOnAppliances: next === "residential" ? prev.addOnAppliances : false,
       entryMethod: next === "residential" ? prev.entryMethod : "",
       accessDetails: next === "residential" ? prev.accessDetails : "",
       petsInHome: next === "residential" ? prev.petsInHome : "",
@@ -526,13 +526,13 @@ export default function BookPage() {
                         <label style={checkboxLabelStyle}>
                           <input
                             type="checkbox"
-                            checked={form.addOnCarpetExtraction}
+                            checked={form.addOnAppliances}
                             onChange={(e) =>
-                              setForm({ ...form, addOnCarpetExtraction: e.target.checked })
+                              setForm({ ...form, addOnAppliances: e.target.checked })
                             }
                             disabled={submitting}
                           />
-                          <span>Carpet extraction (hot water extraction for high-traffic areas)</span>
+                          <span>Appliances (detailed cleaning for refrigerators, ovens, and microwaves)</span>
                         </label>
                       </div>
                     </div>

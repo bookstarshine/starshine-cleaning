@@ -289,7 +289,7 @@ export default function Services() {
               <Link href="/book" className={`${styles.card} ${styles.serviceCard}`}>
                 <div className={styles.cardTop}>
                   <div className={styles.serviceTitle}>Deep Clean</div>
-                  <div className={styles.priceValue}>$399</div>
+                  <div className={styles.priceValue}>$399+</div>
                 </div>
                 <p className={styles.serviceText}>
                   The perfect option for rental-resets, move-ins, or move-outs.
@@ -306,7 +306,7 @@ export default function Services() {
               <Link href="/book" className={`${styles.card} ${styles.serviceCard}`}>
                 <div className={styles.cardTop}>
                   <div className={styles.serviceTitle}>Standard Clean</div>
-                  <div className={styles.priceValue}>$249</div>
+                  <div className={styles.priceValue}>$249+</div>
                 </div>
                 <p className={styles.serviceText}>
                   A thorough clean and tidy reset — ideal before guests, after
@@ -322,7 +322,7 @@ export default function Services() {
               <Link href="/book" className={`${styles.card} ${styles.serviceCard}`}>
                 <div className={styles.cardTop}>
                   <div className={styles.serviceTitle}>Recurring Service</div>
-                  <div className={styles.priceValue}>$199</div>
+                  <div className={styles.priceValue}>$199+</div>
                 </div>
                 <p className={styles.serviceText}>
                   Weekly, biweekly, or monthly visits with consistent standards
@@ -344,12 +344,11 @@ export default function Services() {
                 className={`${styles.card} ${styles.addonCard} ${styles.serviceCard}`}
               >
                 <div className={styles.cardTop}>
-                  <div className={styles.serviceTitle}>Carpet Extraction</div>
+                  <div className={styles.serviceTitle}>Appliance Deep Clean</div>
                   <div className={styles.addonPriceValue}>$100</div>
                 </div>
                 <p className={styles.addonDetails}>
-                  Hot water extraction to lift dirt, salt, and buildup from
-                  high-traffic areas.
+                 Detailed appliance cleaning for refrigerators, ovens, and microwaves to improve hygiene and restore shine.
                 </p>
               </Link>
               <Link
