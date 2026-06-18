@@ -385,13 +385,7 @@ export default function Services() {
                 View full scope &amp; checklist
               </Link>
             </div>
-            <Image
-              src="/images/airbnb.webp"
-              alt="Post construction home cleaning"
-              width={1200}
-              height={600}
-              className={styles.fullWidthImage}
-            />
+            
           </section>
 
           {/* COMMERCIAL */}
