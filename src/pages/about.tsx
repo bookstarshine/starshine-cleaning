@@ -142,7 +142,7 @@ export default function About() {
               <div className={styles.sustainMedia}>
                 <div className={styles.sustainImageWrap}>
                   <Image
-                    src="/images/environment.webp"
+                    src="/images/environ.webp"
                     alt="Environmental sustainability"
                     fill
                     sizes="(max-width: 900px) 100vw, 420px"
