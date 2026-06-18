@@ -348,7 +348,7 @@ export default function Services() {
                   <div className={styles.addonPriceValue}>$100</div>
                 </div>
                 <p className={styles.addonDetails}>
-                 Detailed appliance cleaning for refrigerators, ovens, and microwaves to improve hygiene and restore shine.
+                 Detailed appliance cleaning for refrigerators, ovens, and microwaves.
                 </p>
               </Link>
               <Link
