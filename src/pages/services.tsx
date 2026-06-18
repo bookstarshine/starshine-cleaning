@@ -344,7 +344,7 @@ export default function Services() {
                 className={`${styles.card} ${styles.addonCard} ${styles.serviceCard}`}
               >
                 <div className={styles.cardTop}>
-                  <div className={styles.serviceTitle}>Appliance Deep Clean</div>
+                  <div className={styles.serviceTitle}>Appliances</div>
                   <div className={styles.addonPriceValue}>$100</div>
                 </div>
                 <p className={styles.addonDetails}>
